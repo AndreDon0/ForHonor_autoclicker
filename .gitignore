@@ -1,5 +1,7 @@
-Logs/
-Screen_recording/
-Screenshots/
+data/
+screenshots/
 venv/
 .idea/
+runs/
+data_split/
+yolo*
