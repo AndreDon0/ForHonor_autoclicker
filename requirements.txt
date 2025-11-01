@@ -1,3 +1,6 @@
-dxcam
 opencv-python-headless
 numpy
+torch
+yaml
+PyYAML
+ultralytics

@@ -112,7 +112,7 @@ def main():
     parser.add_argument('--val_ratio', type=float, default=0.2)
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--model', type=str, default='yolov8n.pt', help='YOLOv8 pretrained checkpoint to start from (yolov8n.pt/yolov8s.pt/etc)')
-    parser.add_argument('--epochs', type=int, default=50)
+    parser.add_argument('--epochs', type=int, default=100)
     parser.add_argument('--imgsz', type=int, default=640)
     parser.add_argument('--batch', type=int, default=16)
     parser.add_argument('--run_name', type=str, default='forhonor_train')
