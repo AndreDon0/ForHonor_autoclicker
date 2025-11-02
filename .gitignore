@@ -1,7 +1,8 @@
-data/
-screenshots/
-venv/
-.idea/
-runs/
-data_split/
+data/*
+screenshots/*
+.venv/*
+.idea/*
+runs/*
+data_split/*
 yolo*
+__pycache__/*

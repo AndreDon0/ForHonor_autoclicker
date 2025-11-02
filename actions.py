@@ -1,47 +1,32 @@
-from threading import Thread
-import dxcam
-import keyboard as key
-import pyautogui as pag
+import keyboard
 from time import sleep
-from time import time
-import cv2
-import numpy as np
-import os
-import datetime
-from os.path import abspath
-import ctypes
 from random import random
-import yaml
+from threading import Thread
 
-
-def tap(k1, k2=None):
-    key.press(k1)
-    if k2 is not None:
-        key.press(k2)
+def tap(key_str):
+    keyboard.press(key_str)
     sleep(random() / 50)
-    if k2 is not None:
-        key.release(k2)
-    key.release(k1)
+    keyboard.release(key_str)
 
+def tap_thread(key_str):
+    Thread(target=tap, args=(key_str,), daemon=True).start()
 
 def up():
-    tap("I")
+    tap_thread("I")
 
 def left():
-    tap("J")
+    tap_thread("J")
 
 def right():
-    tap("L")
+    tap_thread("L")
 
 def parry():
-    tap("K")
+    tap_thread("K")
 
 def gb():
-    tap("M")
+    tap_thread("H")
 
 def bash():
-    if random() < 0.5:
-        tap("D", "space")
-    else:
-        tap("A", "space")
-
+    key = "D" if random() < 0.5 else "A"
+    tap_thread(key)
+    tap_thread("space")
